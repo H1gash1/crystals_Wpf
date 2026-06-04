@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "crystals_Wpf", "crystals_Wpf\crystals_Wpf.csproj", "{04D2F9CA-E599-4EB2-A8E9-6267BCB58FC3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "crystals", "crystals\crystals.csproj", "{B46B012F-FFEE-4A21-8A17-12DC2B4BDDB7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{04D2F9CA-E599-4EB2-A8E9-6267BCB58FC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04D2F9CA-E599-4EB2-A8E9-6267BCB58FC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04D2F9CA-E599-4EB2-A8E9-6267BCB58FC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04D2F9CA-E599-4EB2-A8E9-6267BCB58FC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B46B012F-FFEE-4A21-8A17-12DC2B4BDDB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B46B012F-FFEE-4A21-8A17-12DC2B4BDDB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B46B012F-FFEE-4A21-8A17-12DC2B4BDDB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B46B012F-FFEE-4A21-8A17-12DC2B4BDDB7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {480E7DD8-F15C-40B8-AA4E-B69C904FF832}
+	EndGlobalSection
+EndGlobal

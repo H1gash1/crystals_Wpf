@@ -1,0 +1,135 @@
+﻿<Page x:Class="crystals_Wpf.Pages.SettingsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="pack://application:,,,/crystals_Wpf;component/assets/bg.png" 
+                        Stretch="UniformToFill"/>
+        </Grid.Background>
+
+        <Border Background="#80FFFFFF" Margin="20" CornerRadius="20">
+            <Border Width="500" Background="#E6FFFFFF" CornerRadius="15" 
+                    HorizontalAlignment="Center" VerticalAlignment="Center">
+
+                <StackPanel Margin="30">
+
+                    <!-- Заголовок -->
+                    <Border Margin="0,0,0,25" Padding="20,12" CornerRadius="10">
+                        <Border.Background>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                                <GradientStop Color="#FF6B6B" Offset="0"/>
+                                <GradientStop Color="#FF8E53" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Border.Background>
+                        <TextBlock Text="⚙️ НАСТРОЙКИ" 
+                                   FontSize="24" 
+                                   FontWeight="Bold"
+                                   Foreground="White"
+                                   HorizontalAlignment="Center"/>
+                    </Border>
+
+                    <!-- Настройки -->
+                    <Border Background="#F5F5F5" CornerRadius="10" Padding="20" Margin="0,0,0,15">
+                        <StackPanel>
+                            <!-- Музыка -->
+                            <CheckBox x:Name="MusicCheckBox" 
+                                      Margin="0,8"
+                                      FontSize="14"
+                                      Foreground="#333333"
+                                      Checked="MusicCheckBox_Checked"
+                                      Unchecked="MusicCheckBox_Unchecked">
+                                <CheckBox.Content>
+                                    <TextBlock Text="🎵 Музыка" Foreground="#333333"/>
+                                </CheckBox.Content>
+                            </CheckBox>
+
+                            <!-- Громкость музыки -->
+                            <StackPanel Margin="30,0,0,15">
+                                <TextBlock Text="Громкость музыки" FontSize="12" Foreground="#666666"/>
+                                <Slider x:Name="MusicVolumeSlider" 
+                                        Minimum="0" Maximum="1" 
+                                        Value="0.5"
+                                        Width="200"
+                                        Margin="0,5,0,0"
+                                        ValueChanged="MusicVolumeSlider_ValueChanged"/>
+                            </StackPanel>
+
+                            <!-- Звуковые эффекты -->
+                            <CheckBox x:Name="SoundCheckBox" 
+                                      Margin="0,8"
+                                      FontSize="14"
+                                      Foreground="#333333"
+                                      Checked="SoundCheckBox_Checked"
+                                      Unchecked="SoundCheckBox_Unchecked">
+                                <CheckBox.Content>
+                                    <TextBlock Text="🔊 Звуковые эффекты" Foreground="#333333"/>
+                                </CheckBox.Content>
+                            </CheckBox>
+
+                            <!-- Громкость звуковых эффектов -->
+                            <StackPanel Margin="30,0,0,15">
+                                <TextBlock Text="Громкость эффектов" FontSize="12" Foreground="#666666"/>
+                                <Slider x:Name="SoundVolumeSlider" 
+                                        Minimum="0" Maximum="1" 
+                                        Value="0.5"
+                                        Width="200"
+                                        Margin="0,5,0,0"
+                                        ValueChanged="SoundVolumeSlider_ValueChanged"/>
+                            </StackPanel>
+
+                            <!-- Количество ходов -->
+                            <StackPanel Margin="0,15,0,0">
+                                <TextBlock Text="🎯 Количество ходов" FontSize="14" Foreground="#333333"/>
+                                <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                                    <Button Content="-" Width="30" Height="30" Click="DecreaseMoves_Click"/>
+                                    <TextBlock x:Name="MovesCountText" 
+                                               Text="30" 
+                                               FontSize="16" 
+                                               FontWeight="Bold"
+                                               Foreground="#333333"
+                                               Width="50"
+                                               TextAlignment="Center"
+                                               VerticalAlignment="Center"/>
+                                    <Button Content="+" Width="30" Height="30" Click="IncreaseMoves_Click"/>
+                                </StackPanel>
+                            </StackPanel>
+
+                            <!-- Подтверждение выхода -->
+                            <CheckBox x:Name="ConfirmExitCheckBox" 
+                                      Margin="0,15"
+                                      FontSize="14"
+                                      Foreground="#333333">
+                                <CheckBox.Content>
+                                    <TextBlock Text="🚪 Подтверждение выхода" Foreground="#333333"/>
+                                </CheckBox.Content>
+                            </CheckBox>
+                        </StackPanel>
+                    </Border>
+
+                    <!-- Кнопки -->
+                    <Button Content="💾 СОХРАНИТЬ" 
+                            Height="45"
+                            Background="#4ECDC4"
+                            Foreground="White"
+                            FontSize="14"
+                            FontWeight="Bold"
+                            Cursor="Hand"
+                            Click="SaveButton_Click"/>
+
+                    <Button Content="← НАЗАД" 
+                            Height="40"
+                            Margin="0,10,0,0"
+                            Background="Transparent"
+                            Foreground="#4ECDC4"
+                            FontSize="14"
+                            FontWeight="Bold"
+                            BorderThickness="0"
+                            Cursor="Hand"
+                            Click="BackButton_Click"/>
+
+                </StackPanel>
+            </Border>
+        </Border>
+    </Grid>
+</Page>
